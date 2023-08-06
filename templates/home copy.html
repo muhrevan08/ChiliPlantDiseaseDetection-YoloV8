@@ -42,7 +42,7 @@
         }
 
         .feature-box {
-            background-color: rgb(27, 180, 78);
+            background-color: black;
             padding: 20px;
         }
 
@@ -55,8 +55,17 @@
             margin-top: 20px;
         }
 
+        #particles-js {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
         .image-section {
-            background-color: #14770b;
+            background-color: #05445E;
             padding: 20px;
             display: flex;
             flex-wrap: wrap;
@@ -114,15 +123,6 @@
             width: 100%;
             height: auto;
         }
-
-        .nameDetection {
-            display: flex;
-            align-items: center;
-            margin-top: 160px;
-            margin-left: 287px;
-            font-weight: bold;
-            font-size: 50px;
-        }
     </style>
 </head>
 
@@ -137,12 +137,58 @@
         </nav>
     </header>
 
-    <h1 class="nameDetection">Chili Plant Disease Detection With YOLOv8</h1>       
-    
+    <div id="particles-js"></div>
+
+    <!-- Include particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 250, // Number of particles
+                        "density": {
+                            "enable": true,
+                            "value_area": 1000 // Adjust density
+                        }
+                    },
+                    "shape": {
+                        "type": "circle" // Shape of particles (circle, edge, triangle, polygon, etc.)
+                    },
+                    "color": {
+                        "value": ['#1E90FF',]
+                    },
+                    "size": {
+                        "value": 2, // Size of particles
+                        "random": true,
+                        "anim":
+                        {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "move": {
+                        "speed": 1 // Speed of particle movement
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150, // Adjust distance of the connecting lines
+                        "color": "#1E90FF", // Color of the connecting lines
+                        "opacity": 0.6, // Opacity of the connecting lines
+                        "width": 1 // Width of the connecting lines
+                    }
+                }
+            });
+        });
+
+    </script>
     <section class="bottom-section">
         <div class="image-section">
-            <img class="rounded-5" id="image-1" src="../static/web_images/1.jpg" alt="YOLOv8 Results 1">
-            <img class="rounded-5" id="image-2" src="../static/web_images/2.jpg" alt="YOLOv8 Results 2">
+            <img class="rounded-5" id="image-1" src="../static/web_images/1.png" alt="YOLOv8 Results 1">
+            <img class="rounded-5" id="image-2" src="../static/web_images/2.png" alt="YOLOv8 Results 2">
             <img class="rounded-5" id="image-3" src="../static/web_images/3.png" alt="YOLOv8 Results 3">
         </div>
     </section>

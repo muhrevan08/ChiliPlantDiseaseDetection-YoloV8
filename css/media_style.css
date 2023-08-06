@@ -6,7 +6,7 @@ body {
 }
 
 /* Header styles */
-header.feature-box.top {
+header .feature-box .top {
     background-color: #00C4CC;
     height: 100px;
     margin: 0;
