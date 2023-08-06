@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #ffffff;
+    }
+
+    header {
+      background-color: #00C4CC;
+      color: #ffffff;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    section {
+      margin: 10px auto;
+      max-width: 1600px;
+    }
+
+    img {
+      width: 50%;
+    }
+
+    .feature-box {
+      margin-bottom: 10px;
+    }
+
+    .top {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .second {
+      border-top: 1px solid #dddddd;
+    }
+
+    .col-sm {
+      display: flex;
+      justify-content: center;
+    }
+
+    .fa-camera {
+      font-size: 36px;
+      color: #00C4CC;
+    }
+
+    /* Button styles */
+    .btnHome {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .btnCustom {
+      background-color: #00C4CC;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="feature-box top">
+    <h1><strong>Real Time Object Detection using YOLOv8</strong></h1>
+  </header>
+  <header class="feature-box second">
+    <h1><strong>Output Video</strong></h1>
+  </header>
+  <section>
+    <div class="col-sm">
+      <img src="{{ url_for('webapp') }}" alt="Upload video">
+      <i class="fas fa-camera"></i>
+    </div>
+  </section>
+  <section class="btnHome">
+    <a href="/home">
+      <button class="btnCustom">Return to Home</button>
+    </a>
+  </section>
+</body>
+
+</html>
