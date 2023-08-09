@@ -75,7 +75,7 @@ def webcam():
     return render_template('webcam.html')
 
 
-@app.route('/Detections', methods=['GET', 'POST'])
+@app.route('/detections', methods=['GET', 'POST'])
 def upload_page():
     """
     Handles the media upload and saves the media file.

@@ -4,94 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video</title>
+  <title>Live Webcam Detections</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #ffffff;
-    }
 
-    header {
-      background-color: #00C4CC;
-      color: #ffffff;
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #dddddd;
-    }
+  <!-- BOOTSTRAP 5.3.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-    header h1 {
-      font-size: 24px;
-      font-weight: bold;
-    }
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static//css/webcam_style.css">
 
-    section {
-      margin: 10px auto;
-      max-width: 1600px;
-    }
-
-    img {
-      width: 50%;
-    }
-
-    .feature-box {
-      margin-bottom: 10px;
-    }
-
-    .top {
-      border-bottom: 1px solid #dddddd;
-    }
-
-    .second {
-      border-top: 1px solid #dddddd;
-    }
-
-    .col-sm {
-      display: flex;
-      justify-content: center;
-    }
-
-    .fa-camera {
-      font-size: 36px;
-      color: #00C4CC;
-    }
-
-    /* Button styles */
-    .btnHome {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .btnCustom {
-      background-color: #00C4CC;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 
 <body>
-  <header class="feature-box top">
-    <h1><strong>Real Time Object Detection using YOLOv8</strong></h1>
-  </header>
-  <header class="feature-box second">
-    <h1><strong>Output Video</strong></h1>
-  </header>
-  <section>
-    <div class="col-sm">
-      <img src="{{ url_for('webapp') }}" alt="Upload video">
-      <i class="fas fa-camera"></i>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="font-weight: bold;" href="#">
+        <img src="/static/source/Logo-Chili Detection.png" alt="" class="logo">
+        Chili Disease Detection
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <ul class="nav nav-underline">
+              <li class="nav-item">
+                <a class="nav-link menu" aria-current="page" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu" href="/detections">Detections</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active menu" href="/webcam">Live Webcam</a>
+              </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </section>
-  <section class="btnHome">
-    <a href="/home">
-      <button class="btnCustom">Return to Home</button>
-    </a>
-  </section>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="top border-bottom border-dark border-4">
+    <h1 class="nameDetection"><strong>Detections</strong></h1>
+  </div>
+
+  <div class="instructions">
+    <p>WEBCAM</p>
+  </div>
+
+      <img src="{{ url_for('webapp') }}" alt="live webcam" class="output_video">
+      <!-- <i class="fas fa-camera"></i> -->
+      <img src="/static/source/webcam.png" alt="camera" class="ic_camera">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 
 </html>
