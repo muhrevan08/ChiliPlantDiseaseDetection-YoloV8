@@ -7,7 +7,7 @@ contourpy==1.1.0
 cycler==0.11.0
 dominate==2.8.0
 filelock==3.12.2
-Flask==2.3.2
+Flask==1.0.2
 Flask-Bootstrap==3.3.7.1
 Flask-WTF==1.1.1
 fonttools==4.41.1
