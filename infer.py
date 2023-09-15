@@ -62,7 +62,7 @@ def draw_bbox(frame, boxes, class_names, colors):
         cv2.putText(frame, label, (x1, y1 - 2), 0, 1, (255, 255, 255), thickness=1, lineType=cv2.LINE_AA)
 
 
-def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, prediction_type='video',
+def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, prediction_type='image',
              class_path="yolo_assets/Classes/classes.txt",
              outdir='yolo_assets/Detections/output',
              web_app=False):
@@ -82,7 +82,7 @@ def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, predic
     """
     # Initializing the YOLO model
     model = YOLO(model_name)
-    output_directory = os.path.join(outdir)
+    output_directory = os.path.dirname(outdir)
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
     # Loading the class names from the file
@@ -121,6 +121,7 @@ def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, predic
                 # Extracting the bounding box coordinates
                 boxes = result.boxes
                 draw_bbox(frame, boxes, class_names, colors)
+                
 
             if not web_app:
                 # Writing the modified frame to the output video file
@@ -136,7 +137,10 @@ def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, predic
 
             # Yielding the frame if web_app is True
             if web_app:
+                outdir = outdir + '.jpg'
+                cv2.imwrite(outdir, frame)
                 yield frame
+                
 
         # Releasing the VideoWriter and closing the window
         out.release()
