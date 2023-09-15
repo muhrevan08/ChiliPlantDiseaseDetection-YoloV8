@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Detection Chili Plant Disease</title>
+
+  <!-- BOOTSTRAP 5.3.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/css/detections_style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="font-weight: bold" href="#">
+        <img src="/static/source/Logo-Chili Detection.png" alt="" class="logo" />
+        Chili Disease Detection
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <ul class="nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link menu" aria-current="page" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active menu" href="/detections">Detections</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu" href="/realtime">Realtime</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="top border-bottom border-dark border-4">
+    <h1 class="nameDetection"><strong>Detections</strong></h1>
+  </div>
+  <div class="instructions">
+    <p>Deteksi Penyakit Pada Tanaman Cabai dengan Gambar atau Video<br><strong>Add Image (.jpg) or Video
+        (.mp4):</strong></p>
+    <p></p>
+  </div>
+
+  <section>
+    <div class="new">
+      <div class="form-container">
+        <form method="POST" enctype="multipart/form-data">
+          {{form.hidden_tag()}} {{form.file(class_="custom-file-input")}}
+          <div>
+            <button type="submit" name="favorite" value="x" class="btnCustom">
+              DETECT
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="col-sm">
+    <img src="{{ url_for('media') }}" class="small-image image-output" alt="Upload video" />
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

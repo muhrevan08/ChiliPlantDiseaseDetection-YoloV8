@@ -1,5 +1,4 @@
-healthy
-leaf curl
-leaf spot
-whitefly
-yellow
+Healthy
+Leaf Spot
+Leaf Curl
+Yellow Leaves

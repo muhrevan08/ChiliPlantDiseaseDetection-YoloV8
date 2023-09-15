@@ -82,7 +82,7 @@ def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, predic
     """
     # Initializing the YOLO model
     model = YOLO(model_name)
-    output_directory = os.path.dirname(outdir)
+    output_directory = os.path.join(outdir)
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
     # Loading the class names from the file
@@ -158,15 +158,7 @@ def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, predic
         if not web_app:
             cv2.imwrite(outdir, frame)
 
-
 if __name__ == '__main__':
-
-    # Run yolo on image
-    func = run_yolo(source='yolo_assets/Data/street.jpg', prediction_type='image')
-    # Run yolo on video
-    # func = run_yolo(source='yolo_assets/Data/video.mp4', prediction_type='video')
-    # Run yolo on an camera
-    # func = run_yolo()
 
     # Consume the generator to avoid unexpected behavior
     for frame in func:

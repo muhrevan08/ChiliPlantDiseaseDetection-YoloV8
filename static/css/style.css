@@ -49,6 +49,12 @@ body {
 .MyBiodata {
     display: flex;
     justify-content: center;
-    margin-top: 155px;
+    margin-top: 69px;
     font-weight: bold;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }

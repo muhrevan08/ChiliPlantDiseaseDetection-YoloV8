@@ -65,16 +65,6 @@ def home():
     session.clear()
     return render_template('home.html')
 
-
-@app.route("/webcam", methods=['GET', 'POST'])
-def webcam():
-    """
-    Renders the webcam page.
-    """
-    session.clear()
-    return render_template('webcam.html')
-
-
 @app.route('/detections', methods=['GET', 'POST'])
 def upload_page():
     """
@@ -89,8 +79,15 @@ def upload_page():
         # Use session storage to save video file path
         session['media_path'] = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
                                              secure_filename(file.filename))
-    return render_template('media.html', form=form)
+    return render_template('detections.html', form=form)
 
+@app.route("/realtime", methods=['GET', 'POST'])
+def webcam():
+    """
+    Renders the webcam page.
+    """
+    session.clear()
+    return render_template('realtime.html')
 
 @app.route('/media')
 def media():
@@ -101,7 +98,6 @@ def media():
     return Response(generate_frames(source=media_path),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-
 @app.route('/webapp')
 def webapp():
     """
@@ -109,16 +105,13 @@ def webapp():
     """
     return Response(generate_frames_web(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
 
-
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
-
 
 if __name__ == "__main__":
     app.run(debug=True)
