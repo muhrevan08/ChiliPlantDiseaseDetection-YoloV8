@@ -62,7 +62,7 @@ def draw_bbox(frame, boxes, class_names, colors):
         cv2.putText(frame, label, (x1, y1 - 2), 0, 1, (255, 255, 255), thickness=1, lineType=cv2.LINE_AA)
 
 
-def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, prediction_type='image',
+def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, prediction_type='video',
              class_path="yolo_assets/Classes/classes.txt",
              outdir='yolo_assets/Detections/output',
              web_app=False):
