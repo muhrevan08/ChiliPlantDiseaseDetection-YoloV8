@@ -6,15 +6,6 @@ from seaborn import color_palette
 import os
 
 def load_class_names(file_name):
-    """
-    Returns a list of class names read from the file `file_name`.
-
-    Args: 
-        file_name (str): The path to the file containing the class names.
-
-    Returns:
-        List[str]: A list of class names.
-    """
 
     with open(file_name, 'r') as f:
         class_names = f.read().splitlines()
@@ -22,18 +13,7 @@ def load_class_names(file_name):
 
 
 def draw_bbox(frame, boxes, class_names, colors):
-    """
-    Draws bounding boxes with labels on the input frame.
-
-    Args:
-        frame (numpy.ndarray): The input image frame.
-        boxes (List[Object]): List of bounding boxes.
-        class_names (List[str]): List of class names.
-        colors (List[Tuple[int]]): List of RGB color values.
-
-    Returns:
-        None
-    """
+    
     for box in boxes:
         x1, y1, x2, y2 = box.xyxy[0]
         x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
@@ -66,20 +46,7 @@ def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, predic
              class_path="yolo_assets/Classes/classes.txt",
              outdir='yolo_assets/Detections/output',
              web_app=False):
-    """
-    Performs object detection on an image or video.
-
-    Args:
-        model_name (str): The name of the model to use for object detection. Default is 'yolov8s.pt'.
-        source (Union[str, int]): The path to the image or video file or webcam index. Default is 0 (webcam).
-        prediction_type (str): The type of prediction to make. Valid values are 'image' and 'video'. Default is 'video'.
-        class_path (str): The path to the file containing class names. Default is 'classes.txt'.
-        outdir (str): The output directory or file name. Default is 'output'.
-        web_app (bool): Whether the output is for a web application. Default is False.
-
-    Returns:
-        If `web_app` is True and `prediction_type` is 'video', it yields each frame with object detection results.
-    """
+    
     # Initializing the YOLO model
     model = YOLO(model_name)
     output_directory = os.path.dirname(outdir)
@@ -122,7 +89,6 @@ def run_yolo(model_name='yolo_assets/Models/yolov8m_custom.pt', source=0, predic
                 boxes = result.boxes
                 draw_bbox(frame, boxes, class_names, colors)
                 
-
             if not web_app:
                 # Writing the modified frame to the output video file
                 out.write(frame)
