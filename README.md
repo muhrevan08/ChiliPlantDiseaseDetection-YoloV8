@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
 </head>
 <body>
-  <h1>YOLOv8 Object Detection App</h1>
+  <h1>YOLOv8 - Chili Disease Detection App</h1>
   
   <div class="section">
     <h2 class="section-title">Description</h2>
     <p>
-      This is a web application built with Flask that performs object detection using YOLOv8 model. It allows you to upload images or videos, or use the webcam for real-time object detection. The detected objects are labeled with bounding boxes and class names.
+      Website ini dapat melakukan sebuah deteksi penyakit pada tanaman cabai dengan kategori : Healthy, Leaf Curl, Leaf Spot, Yellow Leaves.
     </p>
   </div>
   
@@ -40,13 +40,6 @@
       <li>View the object detection results on the web page.</li>
     </ol>
   </div>
-  
-  <div class="section">
-    <h2 class="section-title">File Structure</h2>
-    <ul>
-      <li><strong>maln.py:</strong> The main Flask application file.</li>
-      <li><strong>infer.py:</strong> Contains functions for running YOLOv8 object detection.</li>
-      <li><strong>templates:</strong> Contains HTML templates for rendering the web pages.
 
 <li><strong>static/web_images:</strong> Contains static images used in the web application.</li>
 <li><strong>yolo_assets:</strong> Contains the YOLOv8 model, class names file, and output directory for detections.</li>
@@ -64,21 +57,6 @@
 <code>ultralytics==8.0.99</code><br>
 </div>
 </div>
-<div class="section">
-<h2 class="section-title">Contributing</h2>
-<p>Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to create an issue or submit a pull request.</p>
-</div>
-<div class="section">
-<h2 class="section-title">License</h2>
-<p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more information.</p>
-</div>
-<div class="section">
-<h2 class="section-title">Acknowledgments</h2>
-<p>Special thanks to the creators of YOLOv8 and Flask for their excellent frameworks.</p>
-</div>
-<div class="section">
-<h2 class="section-title">Contact</h2>
-<p>If you have any questions or inquiries, please contact me at your-email@example.com.</p>
 </div>
 </body>
 </html>
