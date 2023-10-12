@@ -16,13 +16,11 @@ app.config['UPLOAD_FOLDER'] = output_directory
 
 
 class UploadFileForm(FlaskForm):
-    
     file = FileField("File", validators=[InputRequired()])
     submit = SubmitField("Run")
 
 
-def generate_frames(source=''):
-    
+def generate_frames(source=''):    
     yolo_output = run_yolo(source=source, web_app=True)
     for detection_ in yolo_output:
         ref, buffer = cv2.imencode('.jpg', detection_)
@@ -32,7 +30,6 @@ def generate_frames(source=''):
 
 
 def generate_frames_web():
-    
     yolo_output = run_yolo(source=0, web_app=True)
     for detection_ in yolo_output:
         ref, buffer = cv2.imencode('.jpg', detection_)

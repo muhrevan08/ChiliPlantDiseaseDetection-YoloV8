@@ -6,14 +6,12 @@ from seaborn import color_palette
 import os
 
 def load_class_names(file_name):
-
     with open(file_name, 'r') as f:
         class_names = f.read().splitlines()
     return class_names
 
 
 def draw_bbox(frame, boxes, class_names, colors):
-    
     for box in boxes:
         x1, y1, x2, y2 = box.xyxy[0]
         x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
