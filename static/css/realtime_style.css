@@ -60,7 +60,7 @@ section {
 
 .btnCustom {
   background-color: #00C4CC;
-  color: #fff;
+  color: #ffff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -74,9 +74,10 @@ section {
 }
 
 .output_video {
-  width: 1000px;
-  height: 700px;
-  margin-left: 420px;
+  position: relative;
+  width: 600px;
+  height: 450px;
+  margin-left: 470px;
   border-radius: 35px;
 }
 
@@ -84,5 +85,5 @@ section {
   width: 45px;
   height: 45px;
   opacity: 70%;
-  margin-top: -650px;
+  margin-top: -380px;
 }
