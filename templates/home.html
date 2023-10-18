@@ -16,11 +16,13 @@
 <body>
   <div>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" style="font-weight: bold" href="#">
-          <img src="/static/source/Logo-Chili Detection.png" alt="" class="logo" />
-          Chili Disease Detection
+        <a class="navbar-brand" sty le="font-weight: bold" href="#">
+          <div class="logo">
+            <img src="/static/source/Logo-Chili Detection.png" alt="" class="logo-img" />
+            <p class="title-navbar">Chili Disease Detection</p>
+          </div>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +32,7 @@
           <div class="navbar-nav">
             <ul class="nav nav-underline">
               <li class="nav-item">
-                <a class="nav-link active menu" aria-current="page" href="/templates/home.html">Home</a>
+                <a class="nav-link  menu" aria-current="page" href="/templates/home.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link menu" href="/detections">Detections</a>
@@ -45,51 +47,54 @@
     </nav>
   </div>
 
-
   <!-- CONTENT -->
-  <div class="nameDetection">
-    <p class="d-flex justify-content-center align-items-center border-bottom border-top border-dark border-4">CHILI
-      DISEASE DETECTION WITH YOLOv8</p>
-  </div>
+  <div class="container">
 
-  <!-- CAROUSEL -->
-  <div class="set-carousel">
-    <div id="carouselExample" class="carousel slide width:600px">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/static/web_images/1.jpg" class="d-block w-100" alt="...">
+    <div class="nameDetection">
+      <p class="d-flex justify-content-center align-items-center border-bottom border-top border-dark border-4">CHILI
+        DISEASE DETECTION WITH YOLOv8</p>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="set-carousel">
+      <div id="carouselExample" class="carousel slide width:600px">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/web_images/1.jpg" class="carousel-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/web_images/2.jpg" class="carousel-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/web_images/3.jpg" class="carousel-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/web_images/4.jpg" class="carousel-img" alt="...">
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="/static/web_images/2.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/static/web_images/3.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/static/web_images/4.jpg" class="d-block w-100" alt="...">
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    </div>
+
+    <div class="info">
+      <p>Deteksi penyakit pada tanaman cabai menggunakan algoritma YOLO versi 8 dapat dilakukan dengan memasukkan gambar
+        atau video dan realtime<br>Deteksi yang dapat dilakukan adalah <strong>Healthy, Leaf Spot, Leaf Curl, dan Yellow
+          Leaves</strong>
+      </p>
+    </div>
+
+    <div class="MyBiodata">
+      <p class="footer-name">Muhammad Revansyah Rifky Al-basith - 54419382 &copy; 2023</p>
     </div>
   </div>
 
-  <div class="info">
-    <p>Deteksi penyakit pada tanaman cabai menggunakan algoritma YOLO versi 8 dapat dilakukan dengan memasukkan gambar
-      atau video dan realtime<br>Deteksi yang dapat dilakukan adalah <strong>Healthy, Leaf Spot, Leaf Curl, dan Yellow
-        Leaves</strong>
-    </p>
-  </div>
-
-  <div class="MyBiodata">
-    <p class="footer-name">Muhammad Revansyah Rifky Al-basith - 54419382 &copy; 2023</p>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
