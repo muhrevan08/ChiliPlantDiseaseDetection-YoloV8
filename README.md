@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 </head>
@@ -16,8 +16,8 @@
   <div class="section">
     <h2 class="section-title">Installation</h2>
     <div class="code-block">
-      <code>$ git clone https://github.com/your-repo.git</code><br>
-      <code>$ cd your-repo</code><br>
+      <code>$ git clone https://github.com/{your-repo.git}</code><br>
+      <code>$ cd {your-repo}</code><br>
       <code>$ pip install -r requirements.txt</code>
     </div>
   </div>
@@ -33,10 +33,10 @@
       </div>
       <li>Run the application using the following command:</li>
       <div class="code-block">
-        <code>$ python maln.py</code>
+        <code>$ python main.py</code>
       </div>
       <li>Open your web browser and visit <code>http://localhost:5000</code>.</li>
-      <li>Upload an image or video file, or use the webcam for real-time object detection.</li>
+      <li>Upload an image (.jpg) or video (.mp4) file to object detection.</li>
       <li>View the object detection results on the web page.</li>
     </ol>
   </div>
@@ -47,16 +47,20 @@
 <li><strong>requirements.txt:</strong> Lists the required Python packages and their versions.</li>
 </ul>
 </div>
+
 <div class="section">
 <h2 class="section-title">Dependencies</h2>
 <p>The project relies on the following dependencies:</p>
 <div class="code-block">
+<code>ultralytics==8.0.180</code><br>
+<code>opencv-python==4.7.0.72</code><br>
 <code>Flask==2.3.2</code><br>
 <code>Flask-WTF==1.1.1</code><br>
-<code>opencv-python==4.7.0.72</code><br>
-<code>ultralytics==8.0.180</code><br>
+</div>
+
 </div>
 </div>
-</div>
+
 </body>
+
 </html>
