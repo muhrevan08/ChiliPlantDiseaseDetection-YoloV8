@@ -44,6 +44,7 @@ def home():
     session.clear()
     return render_template('home.html')
 
+
 @app.route('/detections', methods=['GET', 'POST'])
 def upload_page():
     form = UploadFileForm()
@@ -57,10 +58,11 @@ def upload_page():
                                              secure_filename(file.filename))
     return render_template('detections.html', form=form)
 
-@app.route("/realtime", methods=['GET', 'POST'])
-def webcam():
-    session.clear()
-    return render_template('realtime.html')
+
+# @app.route("/realtime", methods=['GET', 'POST'])
+# def webcam():
+#     session.clear()
+#     return render_template('realtime.html')
 
 @app.route('/media')
 def media():
