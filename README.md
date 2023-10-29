@@ -9,7 +9,7 @@
   <div class="section">
     <h2 class="section-title">Description</h2>
     <p>
-      Website ini dapat melakukan sebuah deteksi penyakit pada tanaman cabai dengan kategori : Healthy, Leaf Curl, Leaf Spot, Yellow Leaves.
+      This website can carry out disease detection on chili plants in the categories: Healthy, Curly Leaves, Leaf Spots, Yellow Leaves.
     </p>
   </div>
   
