@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-*, html, body {
+*,
+html,
+body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -8,7 +10,11 @@
 }
 
 body {
-    background-color: #cec7c0;
+    background-color: #283845;
+}
+
+.navbar {
+    background-color: #1d2831;
 }
 
 .logo {
@@ -25,10 +31,17 @@ body {
 .title-navbar {
     margin-bottom: 0;
     font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
+
+.menu {
+    color: white;
+    font-size: 16px;
 }
 
 .nav li a:hover {
-    color: #cec7c0;
+    color: #6ba3d0;
     transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -38,29 +51,31 @@ body {
 
 .container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 89vh;
+    color: white;
 }
 
 .nameDetection {
     display: flex;
     justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-right: 4px;
+    border-left: 4px;
     font-weight: bold;
-    font-size: 35px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.menu {
-    color: #ffffff;
-    font-size: 16px;
+    font-size: 40px;
+    margin-bottom: 40px;
 }
 
 .set-carousel {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .carousel-img {
@@ -75,7 +90,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
 }
 
@@ -89,9 +104,7 @@ body {
     text-align: center;
     font-weight: bold;
     border: 2px solid black;
-    background-color: #212529;
+    background-color: #1d2831;
     color: white;
     margin-bottom: 0px;
 }
-
-
