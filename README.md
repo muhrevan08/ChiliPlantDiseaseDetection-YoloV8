@@ -54,7 +54,7 @@
 <code>Flask==2.3.2</code><br>
 <code>Flask-WTF==1.1.1</code><br>
 <code>opencv-python==4.7.0.72</code><br>
-<code>ultralytics==8.0.99</code><br>
+<code>ultralytics==8.0.180</code><br>
 </div>
 </div>
 </div>
