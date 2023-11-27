@@ -28,7 +28,7 @@ def draw_bbox(frame, boxes, class_names, colors):
 
         # Formatting the confidence level and label text
         conf = math.ceil((box.conf[0] * 100)) / 100
-        label = f'{class_name} ({conf}%)'
+        label = f'{class_name} ({conf})'
 
         # Calculating the size of the label text
         text_size = cv2.getTextSize(label, 0, fontScale=1, thickness=2)[0]
@@ -37,7 +37,7 @@ def draw_bbox(frame, boxes, class_names, colors):
 
         # Drawing the background rectangle and the label text
         cv2.rectangle(frame, (x1, y1), rect_coords, color, -1, cv2.LINE_AA)
-        cv2.putText(frame, label, (x1, y1 - 2), 0, 1, (255, 255, 255), thickness=1, lineType=cv2.LINE_AA)
+        cv2.putText(frame, label, (x1, y1 - 2), 0, 1, (0, 0, 0), thickness=1.5, lineType=cv2.LINE_AA)
 
 
 def run_yolo(model_name='yolo_assets/Models/best.pt', source=0, prediction_type='video',
