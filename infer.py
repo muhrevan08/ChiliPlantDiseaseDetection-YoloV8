@@ -4,6 +4,10 @@ import numpy as np
 from ultralytics import YOLO
 from seaborn import color_palette
 import os
+import string
+import random
+
+random_digit = random.randint(0, 9)
 
 def load_class_names(file_name):
     with open(file_name, 'r') as f:
@@ -37,12 +41,17 @@ def draw_bbox(frame, boxes, class_names, colors):
 
         # Drawing the background rectangle and the label text
         cv2.rectangle(frame, (x1, y1), rect_coords, color, -1, cv2.LINE_AA)
-        cv2.putText(frame, label, (x1, y1 - 2), 0, 1, (0, 0, 0), thickness=1.5, lineType=cv2.LINE_AA)
+        cv2.putText(frame, label, (x1, y1 - 2), 0, 1, (0, 0, 0), thickness=1, lineType=cv2.LINE_AA)
+
+
+def generate_random_string(length):
+    alphabet = string.ascii_letters + string.digits
+    return ''.join(random.choice(alphabet) for i in range(length))
 
 
 def run_yolo(model_name='yolo_assets/Models/best.pt', source=0, prediction_type='video',
              class_path="yolo_assets/Classes/classes.txt",
-             outdir='yolo_assets/Detections/output',
+             outdir='yolo_assets/Detections/' + generate_random_string(random_digit),
              web_app=False):
     
     # Initializing the YOLO model
