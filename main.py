@@ -59,11 +59,6 @@ def upload_page():
     return render_template('detections.html', form=form)
 
 
-# @app.route("/realtime", methods=['GET', 'POST'])
-# def webcam():
-#     session.clear()
-#     return render_template('realtime.html')
-
 @app.route('/media')
 def media():
     media_path = session.get('media_path')
